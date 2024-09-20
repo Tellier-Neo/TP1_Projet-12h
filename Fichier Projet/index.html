@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lawrence</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <form action="POST" class="loginform" style="display: 1" >
+      <p>Se connecter</p>
+      <label for="username">Nom d'utilisateur</label>
+      <input type="text" name="username" id="userinput" autocomplete="off" />
+      <label for="email">Adresse mail</label>
+      <input type="email" name="email" id="emailinput" autocomplete="off" />
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="passwordinput" autocomplete="off" />
+      <button id="logbutton" class="formbutton">Connexion</button>
+    </form>
+
+    <form action="POST" class="registerform">
+      <p>Créer un compte</p>
+      <div class="connectionlabel">Lorem Ipsum</div>
+      <input type="text" name="username" id="newuserinput" required autocomplete="off"/>
+      <input type="email" name="email" id="newmailinput" required autocomplete="off"/>
+      <input type="password" name="password" id="newpasswordinput" required autocomplete="off"/>
+      <button id="registerbutton" class="formbutton">S'enregistrer</button>
+    </form>
+
+    <script src="script/main.js" async defer></script>
+  </body>
+</html>
