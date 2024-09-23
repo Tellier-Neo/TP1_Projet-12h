@@ -1,35 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lawrence</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/style/style.css" />
-  </head>
-  <body>
-    <form action="POST" class="loginform" style="display: 1" >
-      <p>Se connecter</p>
-      <label for="username">Nom d'utilisateur</label>
-      <input type="text" name="username" id="userinput" autocomplete="off" />
-      <label for="email">Adresse mail</label>
-      <input type="email" name="email" id="emailinput" autocomplete="off" />
-      <label for="password">Mot de passe</label>
-      <input type="password" name="password" id="passwordinput" autocomplete="off" />
-      <button id="logbutton" class="formbutton">Connexion</button>
-      <button id="switchtoregister" class="formbutton">Créer un compte</button>
-    </form>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion & Inscription</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
 
-    <form action="POST" class="registerform" style="display: none;">
-      <p>Créer un compte</p>
-      <div class="connectionlabel">Lorem Ipsum</div>
-      <input type="text" name="username" id="newuserinput" required autocomplete="off"/>
-      <input type="email" name="email" id="newmailinput" required autocomplete="off"/>
-      <input type="password" name="password" id="newpasswordinput" required autocomplete="off"/>
-      <button id="registerbutton" class="formbutton">S'enregistrer</button>
-    </form>
+    <!-- Formulaire de Connexion -->
+    <div id="login-form" class="form-container">
+        <h2 class="form-title">Connexion</h2>
 
-    <script src="script/main.js" async defer></script>
-  </body>
+        <!-- Interrupteur pour choisir entre Email et Username -->
+        <div class="form-group">
+            <label for="toggle-switch">Se connecter avec: </label>
+            <label class="switch">
+                <input type="checkbox" id="toggle-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <!-- Champs Email et Username -->
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email-input" placeholder="Email" autocomplete="off" required>
+            
+            <label for="username" id="username-label" class="hidden">Nom d'utilisateur</label>
+            <input type="text" id="username-input" placeholder="Nom d'utilisateur" autocomplete="off" class="hidden">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" placeholder="Mot de passe" autocomplete="off" required>
+        </div>
+
+        <button id="login-button">Connexion</button>
+        <button id="switch-to-register" class="switch-button">Créer un compte</button>
+        <div id="login-message" class="message"></div>
+    </div>
+
+    <!-- Formulaire de Création de Compte -->
+    <div id="register-form" class="form-container hidden">
+        <h2 class="form-title">Inscription</h2>
+        <div class="form-group">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" placeholder="Nom d'utilisateur" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" placeholder="Email" autocomplete="off" required>
+        </div>
+        <div class="form-group">
+            <label for="register-password">Mot de passe</label>
+            <input type="password" id="register-password" placeholder="Mot de passe" autocomplete="off" required>
+        </div>
+        <button id="register-button">Inscription</button>
+        <button id="switch-to-login" class="switch-button">Retour à la connexion</button>
+        <div id="register-message" class="message"></div>
+    </div>
+
+    <!-- Lien vers le fichier JavaScript -->
+    <script src="/script/main.js"></script>
+</body>
 </html>

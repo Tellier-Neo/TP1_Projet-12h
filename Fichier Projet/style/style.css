@@ -1,124 +1,117 @@
 body {
-  background: linear-gradient(152deg, #060076, #4e4ee3, #a92cc8);
-  background-size: 180% 180%;
-  animation: gradient-animation 15s ease infinite;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.hidden {
+  display: none;
 }
 
-.loginform {
-  display: flex;
-  flex-direction: column;
-  max-width: 350px;
-  margin: 20% auto 0;
-  margin-top: 15%;
-  margin-bottom: 10%;
-  padding: 2%;
-  border: 2px solid #ddd;
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 12%;
-  box-shadow: 4.8px 4.1px 2.1px rgba(0, 0, 0, 0.045),
-    10.7px 9px 5px rgba(0, 0, 0, 0.061), 18.7px 15.8px 9.4px rgba(0, 0, 0, 0.07),
-    31.3px 26.4px 16.8px rgba(0, 0, 0, 0.077),
-    57.5px 48.5px 31.3px rgba(0, 0, 0, 0.087),
-    167px 141px 75px rgba(0, 0, 0, 0.11);
-  border-color: black;
-}
-
-.loginform p {
-  margin: auto;
-  font-size: xx-large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.loginform label {
-  margin-bottom: 1%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-top: 8%;
-  font-size: medium;
-}
-
-.loginform input {
-  margin-top: 0%;
-  margin-bottom: 2%;
+.form-container {
+  max-width: 400px;
+  margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  height: 100%;
-  font-size: larger;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-color: #000000;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.formbutton {
-  background-color: #00bfff;
-  max-width: fit-content;
-  max-height: fit-content;
-  margin: auto;
-  font-size: larger;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border-radius: 2%;
-  border-style: none;
-  border-width: 1%;
-  padding: 2%;
-  min-width: 75%;
-  transition: 150ms;
-  margin-top: 5%;
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.formbutton:hover {
-  cursor: pointer;
-  background-color: #02a7df;
-  transition: 150ms;
-}
-
-.registerform {
+.form-group {
+  margin-bottom:5%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 250px;
-  margin: 20% auto 0;
-  padding: 2%;
-  border: 2px solid #ddd;
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 12%;
-  box-shadow: 4.8px 4.1px 2.1px rgba(0, 0, 0, 0.045),
-    10.7px 9px 5px rgba(0, 0, 0, 0.061), 18.7px 15.8px 9.4px rgba(0, 0, 0, 0.07),
-    31.3px 26.4px 16.8px rgba(0, 0, 0, 0.077),
-    57.5px 48.5px 31.3px rgba(0, 0, 0, 0.087),
-    167px 141px 75px rgba(0, 0, 0, 0.11);
-  border-color: black;
 }
 
-.registerform p {
-  margin: auto;
-  font-size: xx-large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.connectionlabel {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: black;
-  font-size: medium;
-  margin: auto;
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.switch-button {
+  background-color: #6c757d;
+}
+
+.switch-button:hover {
+  background-color: #5a6268;
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  color: green;
+}
+
+/* Interrupteur (toggle switch) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Arrondi du bouton */
+.slider.round {
+  border-radius: 24px;
 }
