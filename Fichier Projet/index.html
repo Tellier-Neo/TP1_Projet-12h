@@ -44,6 +44,7 @@
     <!-- Formulaire de Création de Compte -->
     <div id="register-form" class="form-container hidden">
         <h2 class="form-title">Inscription</h2>
+        <p class="result_label"></p>
         <div class="form-group">
             <label for="username">Nom d'utilisateur</label>
             <input type="text" id="username" placeholder="Nom d'utilisateur" autocomplete="off" required>
@@ -56,12 +57,13 @@
             <label for="register-password">Mot de passe</label>
             <input type="password" id="register-password" placeholder="Mot de passe" autocomplete="off" required>
         </div>
-        <button id="register-button">Inscription</button>
+        <button id="register-button" type="submit">Inscription</button>
         <button id="switch-to-login" class="switch-button">Retour à la connexion</button>
         <div id="register-message" class="message"></div>
     </div>
 
     <!-- Lien vers le fichier JavaScript -->
     <script src="/script/main.js"></script>
+    <script src="/script/register.js"></script>
 </body>
 </html>
