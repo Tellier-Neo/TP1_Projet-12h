@@ -1,4 +1,5 @@
-document.getElementById('registerForm').addEventListener('submit', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
     event.preventDefault();  // Empêche le rechargement de la page
   
     // Récupérer les valeurs des champs
@@ -50,3 +51,4 @@ document.getElementById('registerForm').addEventListener('submit', function(even
       resultLabel.style.color = 'red';
     });
   });
+});
